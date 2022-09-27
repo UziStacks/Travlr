@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Oregano&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #edf2f4;
+}
+
+.title {
+  font-family: "Oregano", cursive;
+}
+
+.gradient {
+  background: linear-gradient(
+    90deg,
+    #696969 18.81%,
+    rgba(105, 105, 105, 0) 127.87%
+  );
+}
