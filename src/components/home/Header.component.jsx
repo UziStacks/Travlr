@@ -8,7 +8,7 @@ const Header = () => {
       <video
         className="absolute top-0 left-0 w-full h-full object-cover z-[-2]"
         src={waves}
-        autoPlay
+        // autoPlay
         loop
         muted
         type="video/mp4"
