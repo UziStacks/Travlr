@@ -20,3 +20,49 @@ body {
     rgba(105, 105, 105, 0) 127.87%
   );
 }
+
+/* BURGER MENU & ANIMATION */
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.menu-btn > div {
+  background-color: black;
+  width: 28px;
+  height: 3px;
+  margin: 3px;
+  border-radius: 100px;
+}
+
+.open:nth-child(1) {
+  transform: rotate(45deg) translateY(13px);
+  transition: all 400ms ease-in-out;
+}
+
+.open:nth-child(2) {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+}
+
+.open:nth-child(3) {
+  transform: rotate(-45deg) translateY(-13px);
+  transition: all 400ms ease-in-out;
+}
+
+.close:nth-child(1) {
+  transform: rotate(0) translateY(0);
+  transition: all 400ms ease-in-out;
+}
+
+.close:nth-child(2) {
+  opacity: 1;
+  transition: all 400ms ease-in-out;
+}
+
+.close:nth-child(3) {
+  transform: rotate(0) translateY(0);
+  transition: all 400ms ease-in-out;
+}
