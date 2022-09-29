@@ -6,9 +6,18 @@ import { Nav, Footer } from "./components/home";
 
 function App() {
   const [modalToggle, setModalToggle] = useState(false);
+  const [tripModalToggle, setTripModalToggle] = useState(false);
   const handleModalToggle = () => {
     setModalToggle(!modalToggle);
     if (modalToggle) {
+      enableBodyScroll(document.body);
+    } else {
+      disableBodyScroll(document.body);
+    }
+  };
+  const handleTripModalToggle = () => {
+    setTripModalToggle(!tripModalToggle);
+    if (tripModalToggle) {
       enableBodyScroll(document.body);
     } else {
       disableBodyScroll(document.body);
@@ -27,7 +36,15 @@ function App() {
               />
             }
           />
-          <Route path="dashboard" element={<Dashboard />} />
+          <Route
+            path="dashboard"
+            element={
+              <Dashboard
+                tripModalToggle={tripModalToggle}
+                handleTripModalToggle={handleTripModalToggle}
+              />
+            }
+          />
           <Route path="profile" element={<Profile />} />
         </Route>
       </Routes>

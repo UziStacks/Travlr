@@ -1,7 +1,7 @@
 import { Japan, profilepic } from "../../assets/images";
 import { BsPlus } from "react-icons/bs";
 
-const UpcomingTrips = () => {
+const UpcomingTrips = ({ handleTripModalToggle }) => {
   const styles = {
     container: "flex flex-col items-center pt-24",
     button:
@@ -27,7 +27,7 @@ const UpcomingTrips = () => {
 
   return (
     <div className={container}>
-      <button className={button}>
+      <button onClick={handleTripModalToggle} className={button}>
         <BsPlus className={buttonIcon} size={20} /> Plan a new trip
       </button>
       <div>

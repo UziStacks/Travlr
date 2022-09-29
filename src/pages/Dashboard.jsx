@@ -3,14 +3,19 @@ import {
   Carousel,
   PopularDestinations,
   UpcomingTrips,
+  TripModal,
 } from "../components/dashboard";
 
-const Dashboard = () => {
+const Dashboard = ({ handleTripModalToggle, tripModalToggle }) => {
   return (
     <div>
-      <UpcomingTrips />
+      <UpcomingTrips handleTripModalToggle={handleTripModalToggle} />
       <Carousel />
       <PopularDestinations />
+      <TripModal
+        tripModalToggle={tripModalToggle}
+        handleTripModalToggle={handleTripModalToggle}
+      />
     </div>
   );
 };
