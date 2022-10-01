@@ -19,15 +19,16 @@ const Nav = ({ handleModalToggle }) => {
     container: "absolute w-full",
     subContainer: "flex justify-between text-white mx-6 mt-5",
     logo: "title text-[46px]",
+    logotwo: "title text-[46px] text-black",
     menu: "menu-btn",
   };
-  const { container, subContainer, logo, menu } = styles;
+  const { container, subContainer, logo, logotwo, menu } = styles;
 
   return (
     <>
       <nav className={container}>
         <div className={subContainer}>
-          <a href="/" className={logo}>
+          <a href="/" className={mobile ? logotwo : logo}>
             Travlr.
           </a>
           {mobile ? (
