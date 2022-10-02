@@ -4,8 +4,9 @@ import { IoClose } from "react-icons/io5";
 
 const LoginModal = ({ modalToggle, handleModalToggle }) => {
   const styles = {
-    modalContainer: "absolute flex justify-center w-screen z-[100]",
-    modalSubContainer: "bg-white w-[300px] py-10 rounded-lg mt-[5vh]",
+    modalContainer:
+      "absolute top-0 left-0 mx-auto w-full flex justify-center z-[100]",
+    modalSubContainer: "bg-white w-[300px] py-10 rounded-lg mt-[5vh] ",
     modalTitle: "title text-4xl mx-[55px] mt-2",
     modalSubtitle: "text-xl w-[230px] ml-[55px] my-5",
     buttonContainer: "flex flex-col mx-[55px] mb-8 font-light",
