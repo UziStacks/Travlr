@@ -16,7 +16,7 @@ const Nav = ({ handleModalToggle }) => {
   }, [setMobile]);
 
   const styles = {
-    container: "absolute w-full",
+    container: "absolute w-full md:max-w-[1440px] md:mx-auto",
     subContainer: "flex justify-between text-white mx-6 mt-5",
     logo: "title text-[46px]",
     logotwo: "title text-[46px] text-black",

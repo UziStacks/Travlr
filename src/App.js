@@ -2,7 +2,7 @@ import { useState } from "react";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import { Route, Routes } from "react-router-dom";
 import { Home, Dashboard, Profile } from "./pages";
-import { Nav, Footer } from "./components/home";
+import { Footer, Nav } from "./components/home";
 
 function App() {
   const [modalToggle, setModalToggle] = useState(false);
@@ -24,7 +24,7 @@ function App() {
     }
   };
   return (
-    <div className="App">
+    <div className="App lg:flex justify-center md:max-w-[1440px] md:mx-auto">
       <Routes>
         <Route path="/" element={<Nav handleModalToggle={handleModalToggle} />}>
           <Route

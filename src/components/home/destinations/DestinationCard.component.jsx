@@ -4,8 +4,8 @@ import { IoLocationOutline } from "react-icons/io5";
 
 const DestinationCard = () => {
   return (
-    <div className="inline-flex mt-7">
-      <div className="flex flex-col items-center h-[272px] w-[219px] ml-8 bg-white text-white rounded-xl">
+    <div className="flex mt-7">
+      <div className="flex flex-col items-center h-[272px] w-[219px] ml-8 bg-white text-white rounded-xl lg:ml-0">
         <img
           src={spain}
           alt="Spanish Castle"

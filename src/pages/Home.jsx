@@ -4,6 +4,7 @@ import {
   Destinations,
   AppCTA,
   LoginModal,
+  Footer,
 } from "../components/home";
 
 const Home = ({ modalToggle, handleModalToggle }) => {
@@ -17,6 +18,7 @@ const Home = ({ modalToggle, handleModalToggle }) => {
       <Content />
       <Destinations />
       <AppCTA />
+      <Footer />
     </div>
   );
 };
