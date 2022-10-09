@@ -1,5 +1,5 @@
 import React from "react";
-import { Spotlight, Trips, UserInfo } from "../components/profile";
+import { Spotlight, Trips, UserInfo } from "../components/profile/mobile";
 
 const Profile = () => {
   const styles = {
@@ -7,11 +7,13 @@ const Profile = () => {
   };
   const { container } = styles;
   return (
-    <div className={container}>
-      <UserInfo />
-      <Trips />
-      <Spotlight />
-    </div>
+    <>
+      {/* <div className={container}>
+        <UserInfo />
+        <Trips />
+        <Spotlight />
+      </div> */}
+    </>
   );
 };
 

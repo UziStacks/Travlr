@@ -2,7 +2,7 @@ import { useState } from "react";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import { Route, Routes } from "react-router-dom";
 import { Home, Dashboard, Profile } from "./pages";
-import { Footer, Nav } from "./components/home";
+import { Nav } from "./components/home";
 
 function App() {
   const [modalToggle, setModalToggle] = useState(false);
@@ -36,19 +36,21 @@ function App() {
               />
             }
           />
-          <Route
-            path="dashboard"
-            element={
+
+          <Route path="profile" element={<Profile />} />
+        </Route>
+        <Route
+          path="dashboard"
+          element={
+            <div>
               <Dashboard
                 tripModalToggle={tripModalToggle}
                 handleTripModalToggle={handleTripModalToggle}
               />
-            }
-          />
-          <Route path="profile" element={<Profile />} />
-        </Route>
+            </div>
+          }
+        />
       </Routes>
-      {/* <Footer /> */}
     </div>
   );
 }
