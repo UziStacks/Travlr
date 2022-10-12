@@ -8,14 +8,29 @@ import {
 import Sidebar from "../components/dashboard/desktop/Sidebar.component";
 import Searchbar from "../components/Searchbar.component";
 import ProfileIcon from "../components/ProfileIcon.component";
+import LocationCard from "../components/LocationCard.component";
+import DestinationOptions from "../components/DestinationOptions.component";
+import Calender from "../components/Calender.component";
+import GreetingBanner from "../components/GreetingBanner.component";
 import Greeting from "../components/Greeting.component";
-import { BiRefresh } from "react-icons/bi";
-import WhiteButton from "../components/WhiteButton.component";
+import PlanButton from "../components/PlanButton.component";
+import Profile from "../components/Profile.component";
+import { useState } from "react";
+import { Nav } from "../components/home";
 
-const Dashboard = ({ handleTripModalToggle, tripModalToggle }) => {
+const Dashboard = ({
+  handleTripModalToggle,
+  tripModalToggle,
+  handleModalToggle,
+}) => {
+  const [profile, setProfile] = useState(false);
+  const handleProfileToggle = () => {
+    setProfile(!profile);
+  };
   return (
     <>
       <div className="lg:hidden">
+        <Nav handleModalToggle={handleModalToggle} />
         <UpcomingTrips handleTripModalToggle={handleTripModalToggle} />
         <Carousel />
         <PopularDestinations />
@@ -26,36 +41,32 @@ const Dashboard = ({ handleTripModalToggle, tripModalToggle }) => {
       </div>
       <div className="hidden lg:flex w-screen h-screen bg-[#394856]">
         <Sidebar />
-        <div className="w-full mx-5">
-          <div className="flex justify-between  mt-5 w-full">
+        <div className="dashboard w-full overflow-y-scroll overflow-x-hidden mx-5 2xl:px-24 2xl:mx-0">
+          <div className="flex justify-between mt-5 w-full">
             <Searchbar />
-            <ProfileIcon />
+            <ProfileIcon handleProfileToggle={handleProfileToggle} />
           </div>
-          <Greeting />
-          <div className="relative w-[542px] h-[289px] text-white ">
-            <div className="w-full h-full">
-              <div className="absolute bg-gradient-to-r from-black opacity-75 w-[542px] h-[289px] rounded-xl"></div>
-              <img
-                src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                alt=""
-                className="w-full h-full object-cover rounded-xl"
-              />
-            </div>
-            <div className="absolute top-5 left-5">
-              <p className="text-2xl font-semibold">Castelo dos Mouros </p>
-              <p className="text-xl font-light">Sintra, Portugal</p>
-            </div>
-            <div className="absolute w-full bottom-5 left-5">
-              <div className="flex gap-3">
-                <WhiteButton text="Start" rounded={true} />
-                <button className="flex items-center font-light">
-                  <BiRefresh color="gray" /> Next Location
-                </button>
+          <div className="flex items-center justify-between">
+            <Greeting />
+            <PlanButton styling="desktop" />
+          </div>
+          <GreetingBanner />
+          <div className="flex justify-between mt-3 2xl:mt-10">
+            <div>
+              <div className="mb-3 2xl:mb-5">
+                <DestinationOptions styling="roundedXl" />
+              </div>
+              <div className="flex gap-x-3">
+                <LocationCard />
+                <LocationCard />
+                <LocationCard />
               </div>
             </div>
+            <Calender />
           </div>
         </div>
       </div>
+      <Profile handleProfileToggle={handleProfileToggle} profile={profile} />
     </>
   );
 };

@@ -1,12 +1,10 @@
 import { Japan, profilepic } from "../../assets/images";
 import { BsPlus } from "react-icons/bs";
+import PlanButton from "../PlanButton.component";
 
 const UpcomingTrips = ({ handleTripModalToggle }) => {
   const styles = {
     container: "flex flex-col items-center pt-24",
-    button:
-      "inline-flex items-center bg-[#EAEAEA] text-xs font-semibold px-3 py-[6px] mb-3 rounded-xl shadow-md shadow-gray-400",
-    buttonIcon: "mb-[1px]",
     title: "mb-2",
     locationImg: "min-w-[340px] max-h-[180px] rounded-xl",
     subtitle: "mt-5",
@@ -14,22 +12,14 @@ const UpcomingTrips = ({ handleTripModalToggle }) => {
     date: "text-base",
   };
 
-  const {
-    container,
-    button,
-    buttonIcon,
-    title,
-    locationImg,
-    subtitle,
-    profileImg,
-    date,
-  } = styles;
+  const { container, title, locationImg, subtitle, profileImg, date } = styles;
 
   return (
     <div className={container}>
-      <button onClick={handleTripModalToggle} className={button}>
-        <BsPlus className={buttonIcon} size={20} /> Plan a new trip
-      </button>
+      <PlanButton
+        handleTripModalToggle={handleTripModalToggle}
+        styling="mobile"
+      />
       <div>
         <h2 className={title}>Upcoming Trips</h2>
         <img src={Japan} alt="shinjuku" className={locationImg} />

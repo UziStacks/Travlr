@@ -3,7 +3,7 @@ import { uziblue } from "../../../assets/images";
 
 const UserInfo = () => {
   const styles = {
-    container: "mx-8 pt-14",
+    container: "",
     name: "text-4xl font-bold",
     locationContainer: "flex mt-5",
     location: "text-lg mt-2 mr-auto w-[205px]",

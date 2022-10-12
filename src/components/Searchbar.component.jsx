@@ -4,7 +4,7 @@ const Searchbar = () => {
   return (
     <div className="flex items-center h-12 pl-5 bg-[#5E6364] rounded-full">
       <input
-        className="max-w-[260px] bg-transparent placeholder:text-xs"
+        className="min-w-[260px] bg-transparent placeholder:text-xs text-white"
         type="text"
         placeholder="Search for your favourite destinations"
       />

@@ -8,11 +8,13 @@ const Profile = () => {
   const { container } = styles;
   return (
     <>
-      {/* <div className={container}>
-        <UserInfo />
+      <div className={container}>
+        <div className="mt-10 mx-8">
+          <UserInfo />
+        </div>
         <Trips />
         <Spotlight />
-      </div> */}
+      </div>
     </>
   );
 };

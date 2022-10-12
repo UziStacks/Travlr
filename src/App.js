@@ -46,6 +46,7 @@ function App() {
               <Dashboard
                 tripModalToggle={tripModalToggle}
                 handleTripModalToggle={handleTripModalToggle}
+                handleModalToggle={handleModalToggle}
               />
             </div>
           }

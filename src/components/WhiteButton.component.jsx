@@ -1,14 +1,14 @@
 import React from "react";
 
-const WhiteButton = ({ text, rounded }) => {
+const WhiteButton = ({ text, styling }) => {
   const styles = {
-    btnVarOne:
+    roundedFull:
       "bg-white text-black text-sm font-medium rounded-full px-4 py-1 shadow-md shadow-black",
-    btnVarTwo: "bg-white text-black font-semibold rounded-xl px-4 py-2",
+    roundedXl: "bg-white text-black font-semibold rounded-xl mr-3 px-3 py-1",
+    grayBtn: "bg-[#D9D9D9] mr-3 px-2 py-1 rounded-xl shadow-md shadow-gray-400",
   };
-  const { btnVarOne, btnVarTwo } = styles;
 
-  return <button className={rounded ? btnVarOne : btnVarTwo}>{text}</button>;
+  return <button className={styles[styling]}>{text}</button>;
 };
 
 export default WhiteButton;

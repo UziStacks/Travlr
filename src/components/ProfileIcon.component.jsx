@@ -1,7 +1,7 @@
-import { IoIosArrowDown } from "react-icons/io";
+import { TbLayoutSidebarRightExpand } from "react-icons/tb";
 import { uziblue } from "../assets/images";
 
-const ProfileIcon = () => {
+const ProfileIcon = ({ handleProfileToggle }) => {
   return (
     <div className="flex items-center self-start text-white">
       <div className="max-w-[60px] mr-2">
@@ -9,7 +9,11 @@ const ProfileIcon = () => {
       </div>
       <div>
         <div className="flex items-center">
-          Bobward <IoIosArrowDown />
+          Bobward{" "}
+          <TbLayoutSidebarRightExpand
+            onClick={handleProfileToggle}
+            className="cursor-pointer"
+          />
         </div>
         <p className="text-sm">Novice</p>
       </div>

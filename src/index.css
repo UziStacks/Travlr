@@ -65,3 +65,26 @@ body {
   transform: rotate(0) translateY(0);
   transition: all 400ms ease-in-out;
 }
+
+.dashboard::-webkit-scrollbar {
+  display: none;
+}
+
+.dashboard {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.react-calendar {
+  background: #272d32 !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 13px !important;
+  padding: 10px !important;
+  font-family: "Poppins", sans-serif !important;
+  width: 300px !important;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #fff !important;
+}
