@@ -6,7 +6,7 @@ const Profile = ({ profile, handleProfileToggle }) => {
     <div
       className={`${
         profile ? "right-[0] transition-all ease-in-out" : "right-[-100%]"
-      }  bg-[#668099] absolute w-[25%] h-full top-0 text-white transition-all ease-in-out duration-700 z-[100]`}
+      } bg-[#668099] absolute w-[25%] h-full top-0 text-white transition-all ease-in-out duration-700 z-[100]`}
     >
       <TbLayoutSidebarLeftExpand
         onClick={handleProfileToggle}

@@ -25,7 +25,7 @@ const Header = () => {
           Start Planning
         </button>
 
-        <div className="hidden lg:flex justify-between items-center gap-5 bg-neutral-800 bg-opacity-50 backdrop-blur pl-6 h-16 mt-5  rounded-full ">
+        {/* <div className="hidden lg:flex justify-between items-center gap-5 bg-neutral-800 bg-opacity-50 backdrop-blur pl-6 h-16 mt-5  rounded-full ">
           <div className="text-left">
             <p className="text-sm text-black">Choose a location</p>
             <button className="text-[0.9rem]">Los Angeles, California</button>
@@ -39,7 +39,11 @@ const Header = () => {
           <button className="h-[3.8rem] bg-black text-xs px-3 py-2 rounded-full">
             Start Planning
           </button>
-        </div>
+        </div> */}
+
+        <button className="hidden lg:block bg-black text-lg px-5 py-2 mt-1 rounded-full">
+          Start Planning
+        </button>
       </div>
     </div>
   );

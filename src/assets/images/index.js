@@ -5,3 +5,4 @@ export { default as norway } from "./norway.jpg";
 export { default as italy } from "./italy.jpg";
 export { default as uziblue } from "./uziblue.png";
 export { default as portugal } from "./portugal.jpg";
+export { default as fourOFour } from "./404image.jpg";

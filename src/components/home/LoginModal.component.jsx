@@ -1,8 +1,16 @@
 import { AiFillApple, AiOutlineGoogle } from "react-icons/ai";
 import { RiFacebookCircleFill } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const LoginModal = ({ modalToggle, handleModalToggle }) => {
+  const navigate = useNavigate();
+  const handleLogInWithEmail = () => {
+    navigate("/signin");
+    handleModalToggle();
+  };
+
   const styles = {
     modalContainer:
       "absolute top-0 left-0 mx-auto w-full flex justify-center z-[100]",
@@ -51,6 +59,9 @@ const LoginModal = ({ modalToggle, handleModalToggle }) => {
             </button>
             <button className={button2}>
               <AiOutlineGoogle className="mr-1" /> Continue with Google
+            </button>
+            <button onClick={handleLogInWithEmail} className={button2}>
+              <MdEmail className="mr-1" /> Continue with Email
             </button>
           </div>
           <p className={policyText}>

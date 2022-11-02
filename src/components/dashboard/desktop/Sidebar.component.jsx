@@ -1,10 +1,26 @@
 import { RiLayout3Fill } from "react-icons/ri";
 import { BiArrowFromRight } from "react-icons/bi";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import axios from "axios";
+import { AuthContext } from "../../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false);
   const toggleSidebar = () => setSidebar(!sidebar);
+  const { getLoggedIn } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const logout = async () => {
+    try {
+      await axios.get("http://localhost:4000/api/auth/logout");
+      await getLoggedIn();
+      //redirect to home page
+      navigate("/");
+    } catch (err) {
+      console.error(err);
+    }
+  };
   return (
     <nav
       className={`${
@@ -51,7 +67,9 @@ const Sidebar = () => {
       </ul>
       <li className="flex items-center cursor-pointer w-[158.08px] 2xl:gap-5 text-2xl mb-5">
         <RiLayout3Fill color="#101828" />
-        <div className={`${sidebar ? "hidden" : "block"} `}>Logout</div>
+        <div onClick={logout} className={`${sidebar ? "hidden" : "block"} `}>
+          Logout
+        </div>
       </li>
     </nav>
   );
