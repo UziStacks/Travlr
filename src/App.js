@@ -1,11 +1,12 @@
 import { useContext, useState } from "react";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import { Route, Routes } from "react-router-dom";
-import { Home, Dashboard, Profile, SignUp, SignIn } from "./pages";
+import { Home, Dashboard, Profile, SignUp, SignIn, StartTrip } from "./pages";
 import { Nav } from "./components/home";
 import axios from "axios";
 import { AuthContext } from "./context/AuthContext";
 import FourOFour from "./components/FourOFour";
+import TripPlanner from "./pages/TripPlanner";
 
 axios.defaults.withCredentials = true;
 
@@ -73,6 +74,8 @@ function App() {
           <Route path="signin" element={<SignIn />} />
         )}
         <Route path="*" element={<FourOFour />} />
+        <Route path="plan/new/trip" element={<StartTrip />} />
+        <Route path="plan/:tripId" element={<TripPlanner />} />
       </Routes>
     </div>
   );

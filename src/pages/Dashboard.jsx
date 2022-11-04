@@ -15,17 +15,14 @@ import GreetingBanner from "../components/GreetingBanner.component";
 import Greeting from "../components/Greeting.component";
 import PlanButton from "../components/PlanButton.component";
 import Profile from "../components/Profile.component";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { Nav } from "../components/home";
-import { AuthContext } from "../context/AuthContext";
 
 const Dashboard = ({
   handleTripModalToggle,
   tripModalToggle,
   handleModalToggle,
 }) => {
-  const { isAuthenticated } = useContext(AuthContext);
-  console.log(isAuthenticated);
   const [profile, setProfile] = useState(false);
   const handleProfileToggle = () => {
     setProfile(!profile);
